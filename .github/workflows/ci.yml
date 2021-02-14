@@ -35,19 +35,13 @@ jobs:
           node-version: '10.x'
 
       - name: Installs Packages 📦
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
+      - run: yarn install
 
       - name: Builds Project ⚙️
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
-    
+      - run: yarn build
+
       - name: Run Tests 🔬
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: test # will run `yarn test` command
+      - run: yarn build
 
       - name: Release 🎯
         env:
