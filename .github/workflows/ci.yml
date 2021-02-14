@@ -44,6 +44,7 @@ jobs:
         run: yarn build
 
       - name: Release 🎯
+        if: "github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging')"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
