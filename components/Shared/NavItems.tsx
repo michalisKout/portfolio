@@ -10,16 +10,16 @@ const NavItems: FC<Props> = ({
   itemClassName = "nav-item",
 }) => (
   <div className={`${wrapperClassName}`}>
-    <span className={`${itemClassName}`}>
+    <span data-testid={"nav-item"} className={`${itemClassName}`}>
       <Link href={"/"}>Home</Link>
     </span>
-    <span className={`${itemClassName}`}>
+    <span data-testid={"nav-item"} className={`${itemClassName}`}>
       <Link href={"/portfolio"}>Portfolio</Link>
     </span>
-    <span className={`${itemClassName}`}>
+    <span data-testid={"nav-item"} className={`${itemClassName}`}>
       <Link href={"/experience"}>Experience</Link>
     </span>
-    <span className={`${itemClassName}`}>
+    <span data-testid={"nav-item"} className={`${itemClassName}`}>
       <Link href={"/contact"}>Contact</Link>
     </span>
   </div>
