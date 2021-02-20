@@ -1,11 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 import useToggle from "core/hooks/utils/useToggle";
 
-const Switch = () => {
-  const { toggle, handleClick } = useToggle();
+interface Props {
+  onToggle?: (isToggled: boolean) => void;
+}
+
+const Switch: FC<Props> = ({ onToggle }) => {
+  const { isToggled, toggleHandler } = useToggle(onToggle);
+
   return (
-    <div className="switch" onClick={handleClick}>
-      <input type="checkbox" checked={toggle} readOnly />
+    <div className="switch" data-testid="switch-button" onClick={toggleHandler}>
+      <input type="checkbox" checked={isToggled} readOnly />
       <span className="slider" />
     </div>
   );

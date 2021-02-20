@@ -2,8 +2,13 @@ import PrimaryTitle from "../Shared/PrimaryTitle";
 import UserContent from "./components/UserContent";
 import SocialMedia from "./components/SocialMedia";
 import UserImage from "./components/UserImage";
+import { FC, ReactNode } from "react";
 
-const User = () => {
+interface Props {
+  mainContent: ReactNode;
+  imgUrl: string;
+}
+const User: FC<Props> = ({ imgUrl, mainContent }) => {
   return (
     <>
       <section className="user--section">
@@ -11,10 +16,10 @@ const User = () => {
           <div className="user--inner-wrapper">
             <div className="lg:w-1/2">
               <PrimaryTitle />
-              <UserContent />
+              <UserContent content={mainContent} />
               <SocialMedia />
             </div>
-            <UserImage />
+            <UserImage imgUrl={imgUrl} />
           </div>
         </div>
       </section>

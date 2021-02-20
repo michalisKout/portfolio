@@ -8,4 +8,5 @@ module.exports = {
   moduleNameMapper: {
     "\\.(css|less)$": "identity-obj-proxy",
   },
+  moduleDirectories: ["node_modules", "./"],
 };
