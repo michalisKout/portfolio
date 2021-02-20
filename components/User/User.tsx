@@ -3,21 +3,23 @@ import UserContent from "./components/UserContent";
 import SocialMedia from "./components/SocialMedia";
 import UserImage from "./components/UserImage";
 
-const User = () => (
-  <>
-    <section className="user--section">
-      <div className="user--inner-container">
-        <div className="user--inner-wrapper">
-          <div className="lg:w-1/2">
-            <PrimaryTitle />
-            <UserContent />
-            <SocialMedia />
+const User = () => {
+  return (
+    <>
+      <section className="user--section">
+        <div className="user--inner-container">
+          <div className="user--inner-wrapper">
+            <div className="lg:w-1/2">
+              <PrimaryTitle />
+              <UserContent />
+              <SocialMedia />
+            </div>
+            <UserImage />
           </div>
-          <UserImage />
         </div>
-      </div>
-    </section>
-  </>
-);
+      </section>
+    </>
+  );
+};
 
 export default User;
