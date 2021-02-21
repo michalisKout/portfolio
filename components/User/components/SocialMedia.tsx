@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "assets/index";
+import Icon from "components/Shared/Icon";
 
 const SocialMedia = () => (
   <div className="user--social-medial--container">

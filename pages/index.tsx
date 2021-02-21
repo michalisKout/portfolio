@@ -15,9 +15,9 @@ const Home: FC<Props> = ({ userDetails }) => {
   return (
     <main className={`${isDarkMode ? "dark" : ""}`}>
       <User
-        imgUrl={userDetails.includes.Asset[0].fields.file.url}
+        imgUrl={userDetails?.includes?.Asset[0]?.fields?.file?.url}
         mainContent={documentToReactComponents(
-          userDetails.items[0].fields.mainDescription
+          userDetails?.items[0]?.fields?.mainDescription
         )}
       />
       <InfoSection />
