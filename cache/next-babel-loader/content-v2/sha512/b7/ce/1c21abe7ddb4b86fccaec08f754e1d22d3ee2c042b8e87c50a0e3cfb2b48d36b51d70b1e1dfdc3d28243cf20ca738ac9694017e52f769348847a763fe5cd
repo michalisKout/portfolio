@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from \"react\";\n\nconst Experience = () => {\n  return /*#__PURE__*/_jsx(\"div\", {\n    children: \"Experience\"\n  });\n};\n\nexport default Experience;","map":null,"metadata":{},"sourceType":"module"}
