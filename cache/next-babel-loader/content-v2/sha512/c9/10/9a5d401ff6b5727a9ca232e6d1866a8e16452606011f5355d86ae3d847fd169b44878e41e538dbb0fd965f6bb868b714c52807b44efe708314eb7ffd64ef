@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\n\nvar UserContent = function UserContent(_ref) {\n  var content = _ref.content;\n  return /*#__PURE__*/_jsx(\"section\", {\n    className: \"user--content\",\n    children: content && content\n  });\n};\n\nexport default UserContent;","map":null,"metadata":{},"sourceType":"module"}

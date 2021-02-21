@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createClient } from 'contentful';\nconsole.log(process.env.CONTENTFUL_SPACE_ID);\nexport default createClient({\n  space: process.env.CONTENTFUL_SPACE_ID || 'test',\n  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || 'test'\n});","map":null,"metadata":{},"sourceType":"module"}
