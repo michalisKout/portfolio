@@ -27,4 +27,18 @@ const Home: FC<Props> = ({ data }) => {
   );
 };
 
+export const getStaticProps: GetStaticProps = async (context) => {
+  const userDetails = await CmsAPI.getUserDetails();
+
+  if (!userDetails) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { data: userDetails },
+  };
+};
+
 export default Home;
