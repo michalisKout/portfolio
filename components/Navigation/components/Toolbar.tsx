@@ -1,23 +1,21 @@
 import Switch from "../../Shared/Switch";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useDarkMode } from "core/providers/DarkModeProvider";
 
-const Toolbar = () => (
-  <div className="toolbar">
-    <div className="relative">
-      <span className="search--container">
-        <svg className="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          ></path>
-        </svg>
-      </span>
-      <input type="text" className="search--input" placeholder="Search" />
+const Toolbar = () => {
+  const { setDarkMode } = useDarkMode();
+  return (
+    <div className="toolbar">
+      <div className="relative">
+        <span className="search--container">
+          <FontAwesomeIcon icon={faSearch} />
+        </span>
+        <input type="text" className="search--input" placeholder="Search" />
+      </div>
+      <Switch onToggle={setDarkMode} />
     </div>
-    <Switch />
-  </div>
-);
+  );
+};
 
 export default Toolbar;

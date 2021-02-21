@@ -1,16 +1,19 @@
 import React, { useCallback } from "react";
-import { useDarkMode } from "core/providers/DarkModeProvider";
 
-const useToggle = () => {
-  const { setDarkMode } = useDarkMode();
-  const [toggle, setToggle] = React.useState(false);
+const useToggle = (
+  externalHandler?: (toggle: boolean) => void,
+  initStatus = false
+) => {
+  const [isToggled, setToggle] = React.useState(initStatus);
 
-  const handleClick = useCallback(() => {
-    setToggle(!toggle);
-    setDarkMode(!toggle);
-  }, [toggle]);
+  const toggleHandler = useCallback(() => {
+    setToggle(!isToggled);
+    if (externalHandler) {
+      externalHandler(!isToggled);
+    }
+  }, [isToggled]);
 
-  return { toggle, handleClick };
+  return { isToggled, toggleHandler };
 };
 
 export default useToggle;
