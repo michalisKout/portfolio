@@ -1,0 +1,31 @@
+.footer {
+    @apply flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-800;
+}
+
+.footer--title {
+    @apply text-lg font-bold text-center lg:text-2xl;
+}
+
+.subscribe--container {
+    @apply bg-white border rounded-md focus-within:ring focus-within:border-blue-500;
+}
+
+.subscribe--wrapper {
+    @apply flex flex-wrap justify-between md:flex-row;
+}
+
+.subscribe--input {
+    @apply p-2 m-1 text-sm text-gray-700 appearance-none focus:outline-none focus:placeholder-transparent;
+}
+
+.footer--menu {
+    @apply flex flex-col items-center justify-between mt-6 md:flex-row;
+}
+
+.footer--menu--link {
+    @apply px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline;
+}
+
+.footer--menu-wrapper {
+    @apply flex mt-4 md:m-0;
+}

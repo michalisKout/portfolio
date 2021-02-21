@@ -1,0 +1,31 @@
+.info--button {
+    @apply px-5 py-2 font-semibold text-gray-100 transition-colors duration-200 transform bg-gray-900 rounded hover:bg-gray-700;
+}
+
+.info--container {
+    @apply bg-gray-100 dark:bg-gray-900 lg:py-12 lg:flex lg:justify-center;
+}
+
+.info--content {
+    @apply mt-4 text-gray-600 dark:text-gray-400;
+}
+
+.info--tag {
+    @apply text-indigo-600 dark:text-indigo-400;
+}
+
+.info--title {
+    @apply text-2xl font-bold text-gray-800 dark:text-white md:text-3xl;
+}
+
+.info--content--wrapper {
+    @apply max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2;
+}
+
+.info--wrapper {
+    @apply bg-white dark:bg-gray-800 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg;
+}
+
+.info--image {
+    @apply h-64 bg-cover lg:rounded-lg lg:h-full;
+}

@@ -1,3 +1,9 @@
+@import "footer.css";
+@import "navigation.css";
+@import "user.css";
+@import "common.css";
+@import "info.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
