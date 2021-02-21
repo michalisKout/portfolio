@@ -1,0 +1,44 @@
+.button-primary {
+    @apply w-full p-2 m-1 text-sm font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded lg:w-auto hover:bg-gray-700;
+}
+
+.breaking-line {
+    @apply h-px mt-6 border-gray-300 border-none bg-gray-700 dark:bg-gray-400;
+}
+
+.link-primary {
+    @apply text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300;
+}
+
+.link-secondary {
+
+}
+
+.search--container {
+    @apply absolute inset-y-0 left-0 flex items-center pl-3;
+}
+
+.search--input {
+    @apply w-full py-3 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring;
+}
+
+.switch {
+    @apply cursor-pointer w-12 h-6 flex items-center bg-gray-300 rounded-full p-1 ml-4;
+}
+
+.switch input {
+    @apply hidden;
+}
+
+.switch input:checked ~ .slider {
+    @apply transform translate-x-6 transition-all;
+}
+
+
+.slider {
+    @apply bg-white w-4 h-4 rounded-full shadow-md transition-all;
+}
+
+.icon-svg {
+   @apply w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400;
+}

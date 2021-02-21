@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Footer 1`] = `
+<DocumentFragment>
+  <footer
+    class="footer"
+  >
+    <div
+      class="container py-6"
+    >
+      <h1
+        class="footer--title"
+      >
+        Join 31,000+ other and never miss 
+        <br />
+         out on new tips, tutorials, and more.
+      </h1>
+      <div
+        class="flex justify-center mt-6"
+      >
+        <div
+          class="subscribe--container"
+        >
+          <div
+            class="subscribe--wrapper"
+          >
+            <input
+              aria-label="Enter your email"
+              class="subscribe--input"
+              placeholder="Enter your email"
+              type="email"
+            />
+            <button
+              class="button-primary"
+            >
+              subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+      <hr
+        class="breaking-line"
+      />
+      <div
+        class="footer--menu"
+      >
+        <div>
+          <a
+            class="link-primary"
+            href="#"
+          >
+            Brand
+          </a>
+        </div>
+        <div
+          class="footer--menu-wrapper"
+        >
+          <div
+            class="-mx-4"
+          >
+            <span
+              class="footer--menu--link"
+              data-testid="nav-item"
+            >
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </span>
+            <span
+              class="footer--menu--link"
+              data-testid="nav-item"
+            >
+              <a
+                href="/portfolio"
+              >
+                Portfolio
+              </a>
+            </span>
+            <span
+              class="footer--menu--link"
+              data-testid="nav-item"
+            >
+              <a
+                href="/experience"
+              >
+                Experience
+              </a>
+            </span>
+            <span
+              class="footer--menu--link"
+              data-testid="nav-item"
+            >
+              <a
+                href="/contact"
+              >
+                Contact
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

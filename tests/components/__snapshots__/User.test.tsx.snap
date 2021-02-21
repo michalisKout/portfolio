@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User should render User 1`] = `
+<DocumentFragment>
+  <section
+    class="user--section"
+  >
+    <div
+      class="user--inner-container"
+    >
+      <div
+        class="user--inner-wrapper"
+      >
+        <div
+          class="lg:w-1/2"
+        >
+          <h1
+            class="user--title"
+          >
+            Who I am
+          </h1>
+          <section
+            class="user--content"
+          />
+          <div
+            class="user--social-medial--container"
+          >
+            <a
+              aria-label="Twitter"
+              class="mx-2"
+              href="#"
+            />
+            <a
+              aria-label="Facebook"
+              class="mx-2"
+              href="#"
+            />
+            <a
+              aria-label="Linkden"
+              class="mx-2"
+              href="#"
+            />
+            <a
+              aria-label="Github"
+              class="mx-2"
+              href="#"
+            />
+          </div>
+        </div>
+        <div
+          class="user--image-container"
+        >
+          <div
+            class="user--image-wrapper"
+          >
+            <div
+              class="max-w-lg"
+            >
+              <img
+                alt=""
+                class="user--image"
+                src="/"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
