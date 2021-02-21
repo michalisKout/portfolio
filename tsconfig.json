@@ -18,11 +18,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "rootDir": "./",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
   },
   "include": [
+    "global.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"

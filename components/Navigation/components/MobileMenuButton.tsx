@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const MobileMenuButton = () => {
   return (
@@ -8,12 +10,7 @@ const MobileMenuButton = () => {
         className="nav-burger-mobile"
         aria-label="toggle menu"
       >
-        <svg viewBox="0 0 24 24" className="w-6 h-6 fillCurrent">
-          <path
-            fillRule="evenodd"
-            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-          ></path>
-        </svg>
+        <FontAwesomeIcon icon={faBars} />
       </button>
     </div>
   );
