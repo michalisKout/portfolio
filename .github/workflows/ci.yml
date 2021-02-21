@@ -52,6 +52,7 @@ jobs:
           CI: true
 
       - run: yarn export
+      - run: touch ./out/.nojekyll
 
       - name: Run Tests 🔬
         run: yarn test
