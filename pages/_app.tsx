@@ -7,6 +7,7 @@ import { AppProps } from 'next/app';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <DarkModeProvider>
+      <link rel="shortcut icon" href="/favicon.ico" />
       <Navigation />
       <Component {...pageProps} />
     </DarkModeProvider>
