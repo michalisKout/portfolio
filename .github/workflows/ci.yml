@@ -41,7 +41,7 @@ jobs:
         run: yarn build
 
       - name: Run Tests 🔬
-        run: yarn build
+        run: yarn test
 
       - name: Release 🎯
         if: "github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging')"
