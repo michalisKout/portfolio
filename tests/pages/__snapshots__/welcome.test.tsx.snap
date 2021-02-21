@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home page renders Home page 1`] = `
+exports[`Welcome page renders Welcome page 1`] = `
 <DocumentFragment>
   <main
     class=""
