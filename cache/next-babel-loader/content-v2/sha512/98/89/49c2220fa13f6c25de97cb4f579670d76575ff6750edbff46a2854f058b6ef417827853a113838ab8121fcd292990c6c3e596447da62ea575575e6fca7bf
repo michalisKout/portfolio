@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\n\nvar PrimaryTitle = function PrimaryTitle() {\n  return /*#__PURE__*/_jsx(\"h1\", {\n    className: \"user--title\",\n    children: \"Who I am\"\n  });\n};\n\nexport default PrimaryTitle;","map":null,"metadata":{},"sourceType":"module"}
