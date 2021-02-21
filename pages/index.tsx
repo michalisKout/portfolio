@@ -5,6 +5,7 @@ import CmsAPI from "../core/api";
 import { FC } from "react";
 import { useDarkMode } from "core/providers/DarkModeProvider";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { GetStaticProps } from "next";
 
 interface Props {
   data: Record<any, any>;
@@ -25,13 +26,5 @@ const Home: FC<Props> = ({ data }) => {
     </main>
   );
 };
-
-export async function getStaticProps() {
-  const userDetails = await CmsAPI.getUserDetails();
-
-  return {
-    props: { data: userDetails || {} },
-  };
-}
 
 export default Home;

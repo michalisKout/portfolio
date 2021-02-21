@@ -18,7 +18,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "rootDir": "./",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
   },
