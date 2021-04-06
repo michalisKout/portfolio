@@ -27,7 +27,7 @@ const NavItems: FC<Props> = ({
   itemClassName = 'nav-item',
 }) => (
   <div className={`${wrapperClassName}`}>
-    {menuConfig.map(({ url, title, index }) => (
+    {menuConfig.map(({ url, title }, index) => (
       <NavItem key={`${title}_${index}`} url={url} title={title} itemClassName={itemClassName} />
     ))}
   </div>

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import User from '../components/User/User';
 import Footer from '../components/Footer/Footer';
 import InfoSection from '../components/InfoSection/InfoSection';
@@ -25,13 +26,18 @@ interface Props {
 
 const Welcome: FC<Props> = ({ data = userMock }) => {
   const darkModeClass = useDarkModeClassName();
-  const { profileImageUrl, description, projects, job } = data;
 
   return (
     <main className={darkModeClass}>
-      <InfoSection imgUrl={profileImageUrl} mainContent={documentToReactComponents(description)} />
-      <Projects projects={projects} />
-      <User imgUrl={job.imageUrl} mainContent={documentToReactComponents(job.description)} />
+      <InfoSection
+        imgUrl={data?.profileImageUrl}
+        mainContent={documentToReactComponents(data?.description as Document)}
+      />
+      <Projects projects={data?.projects as Projects} />
+      <User
+        imgUrl={data?.job.imageUrl}
+        mainContent={documentToReactComponents(data?.job.description as Document)}
+      />
 
       <Footer />
     </main>
@@ -43,7 +49,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const projects = await CmsAPI.getBlogPosts();
   const jobStatus = await CmsAPI.getJobStatus();
 
-  console.log(jobStatus.items[0].fields.image.fields.file.url);
   const normalizedData = {
     description: userDetails?.items[0]?.fields?.mainDescription,
     profileImageUrl: userDetails?.includes?.Asset[0]?.fields?.file?.url,

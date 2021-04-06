@@ -1,13 +1,20 @@
 import React, { FC } from 'react';
 import Project from './Project';
-import { EntryCollection } from 'contentful';
 import PrimaryTitle from '../Shared/PrimaryTitle';
 
+export type Projects = {
+  title: string;
+  link: string;
+  stack: string;
+  imageUrl: string;
+}[];
+
 interface Props {
-  projects: EntryCollection<any>[];
+  projects: Projects;
 }
 
 const Projects: FC<Props> = ({ projects }) => {
+  console.log(projects);
   return (
     <section className={'secondary--section'}>
       <div className={'flex justify-center pt-20'}>
