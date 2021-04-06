@@ -1,20 +1,14 @@
-import InfoTitle from "./InfoTitle";
+import InfoTitle from './InfoTitle';
+import { FC, ReactNode } from 'react';
 
-const InfoContent = () => (
+interface Props {
+  content: ReactNode;
+}
+
+const InfoContent: FC<Props> = ({ content }) => (
   <div className="info--content--wrapper">
     <InfoTitle />
-    <p className="info--content">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi
-      reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim
-      expedita aperiam mollitia iure consectetur dicta tenetur, porro
-      consequuntur saepe accusantium consequatur.
-    </p>
-
-    <div className="mt-8">
-      <a href="#" className="info--button">
-        Start Now
-      </a>
-    </div>
+    <p className="info--content">{content}</p>
   </div>
 );
 

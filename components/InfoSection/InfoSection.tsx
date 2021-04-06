@@ -1,18 +1,23 @@
-import InfoContent from "./components/InfoContent";
+import InfoContent from './components/InfoContent';
+import { FC, ReactNode } from 'react';
 
-const InfoSection = () => (
-  <section className="info--container">
+interface Props {
+  mainContent: ReactNode;
+  imgUrl: string;
+}
+
+const InfoSection: FC<Props> = ({ mainContent, imgUrl }) => (
+  <section className="main--section info--container pt-20 pb-20">
     <div className="info--wrapper">
       <div className="lg:w-1/2">
         <div
           className="info--image"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80')",
+            backgroundImage: `url(${imgUrl})`,
           }}
         />
       </div>
-      <InfoContent />
+      <InfoContent content={mainContent} />
     </div>
   </section>
 );

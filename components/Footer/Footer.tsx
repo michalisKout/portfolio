@@ -1,26 +1,19 @@
-import FooterTitle from "./components/FooterTitle";
-import Subscribe from "./components/Subscribe";
-import PrimaryLink from "../Shared/PrimaryLink";
-import NavItems from "../Shared/NavItems";
+import PrimaryLink from '../Shared/PrimaryLink';
 
 const Footer = () => (
   <footer className="footer">
     <div className="container py-6">
-      <FooterTitle />
-      <div className="flex justify-center mt-6">
-        <Subscribe />
-      </div>
-
       <hr className="breaking-line" />
 
       <div className="footer--menu">
-        <PrimaryLink />
+        <PrimaryLink text={'michalis.koutridis@gmail.com'} />
 
         <div className="footer--menu-wrapper">
-          <NavItems
-            wrapperClassName={"-mx-4"}
-            itemClassName={"footer--menu--link"}
-          />
+          Made with <a href="https://nextjs.org/"> next js </a>,
+          <a href="https://www.typescriptlang.org/"> typescript </a>,
+          <a href="https://tailwindcss.com/"> tailwindcss </a>,
+          <a href="https://www.contentful.com/"> contentful</a> and
+          <a href="https://merakiui.com/"> merakiui </a>.
         </div>
       </div>
     </div>

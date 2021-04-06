@@ -3,7 +3,7 @@
 }
 
 .info--container {
-    @apply bg-gray-100 dark:bg-gray-900 lg:py-12 lg:flex lg:justify-center;
+    @apply lg:py-12 lg:flex lg:justify-center;
 }
 
 .info--content {

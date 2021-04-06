@@ -1,3 +1,11 @@
+.main--section{
+    @apply bg-white dark:bg-gray-800 transition-all;
+}
+
+.secondary--section {
+    @apply bg-gray-100 dark:bg-gray-900 transition-all;
+}
+
 .button-primary {
     @apply w-full p-2 m-1 text-sm font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded lg:w-auto hover:bg-gray-700;
 }
@@ -7,7 +15,7 @@
 }
 
 .link-primary {
-    @apply text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300;
+    @apply w-full whitespace-nowrap block text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300;
 }
 
 .link-secondary {
@@ -23,7 +31,7 @@
 }
 
 .switch {
-    @apply cursor-pointer w-12 h-6 flex items-center bg-gray-300 rounded-full p-1 ml-4;
+    @apply cursor-pointer w-12 h-6 flex items-center rounded-full p-1 ml-4;
 }
 
 .switch input {
@@ -31,7 +39,7 @@
 }
 
 .switch input:checked ~ .slider {
-    @apply transform translate-x-6 transition-all;
+    @apply transform translate-x-6 transition-all bg-yellow-300;
 }
 
 

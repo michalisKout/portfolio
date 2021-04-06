@@ -1,6 +1,6 @@
-import { ContentfulClientApi, Entry } from "contentful";
-import contentfulClient from "./contentful";
-import { ICmsAPI } from "./types";
+import { ContentfulClientApi, Entry } from 'contentful';
+import contentfulClient from './contentful';
+import { ICmsAPI } from './types';
 
 class CmsAPI implements ICmsAPI {
   client: ContentfulClientApi;
@@ -14,22 +14,26 @@ class CmsAPI implements ICmsAPI {
 
   getUserDetails() {
     return this.fetchEntries({
-      content_type: "personalDetails",
+      content_type: 'personalDetails',
     });
   }
 
-  getBlogPosts(handler: (items: Entry<unknown>[]) => void) {
-    this.fetchEntries({
-      content_type: "blogPost",
-    }).then((response) => {
-      handler(response.items);
-    });
+  getBlogPosts() {
+    return this.fetchEntries({
+      content_type: 'blogPost',
+    }).then((response) => response.items);
+  }
+
+  getJobStatus() {
+    return this.fetchEntries({
+      content_type: 'jobStatus',
+    }).then((response) => response);
   }
 
   getSinglePost(slug: string) {
     this.fetchEntries({
-      "fields.slug": slug,
-      content_type: "blogPost",
+      'fields.slug': slug,
+      content_type: 'blogPost',
     }).then((response) => response.items);
   }
 }

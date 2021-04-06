@@ -3,24 +3,36 @@ import Footer from '../components/Footer/Footer';
 import InfoSection from '../components/InfoSection/InfoSection';
 import CmsAPI from '../core/api';
 import { FC } from 'react';
-import { useDarkMode } from 'core/providers/DarkModeProvider';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { GetStaticProps } from 'next';
 import userMock from '__mocks__/userMock';
+import Projects from '../components/Projects/Projects';
+import { Document } from '@contentful/rich-text-types';
+import { useDarkModeClassName } from '../core/hooks/utils/useDarkModeClassName';
+import { EntryCollection } from 'contentful';
 
 interface Props {
-  data: Record<any, any>;
+  data: {
+    description: Document;
+    profileImageUrl: string;
+    projects: EntryCollection<any>;
+    job: {
+      description: Document;
+      imageUrl: string;
+    };
+  };
 }
+
 const Welcome: FC<Props> = ({ data = userMock }) => {
-  const { isDarkMode } = useDarkMode();
+  const darkModeClass = useDarkModeClassName();
+  const { profileImageUrl, description, projects, job } = data;
 
   return (
-    <main className={`${isDarkMode ? 'dark' : ''}`}>
-      <User
-        imgUrl={data?.includes?.Asset[0]?.fields?.file?.url}
-        mainContent={documentToReactComponents(data?.items[0]?.fields?.mainDescription)}
-      />
-      <InfoSection />
+    <main className={darkModeClass}>
+      <InfoSection imgUrl={profileImageUrl} mainContent={documentToReactComponents(description)} />
+      <Projects projects={projects} />
+      <User imgUrl={job.imageUrl} mainContent={documentToReactComponents(job.description)} />
+
       <Footer />
     </main>
   );
@@ -28,9 +40,27 @@ const Welcome: FC<Props> = ({ data = userMock }) => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const userDetails = await CmsAPI.getUserDetails();
+  const projects = await CmsAPI.getBlogPosts();
+  const jobStatus = await CmsAPI.getJobStatus();
+
+  console.log(jobStatus.items[0].fields.image.fields.file.url);
+  const normalizedData = {
+    description: userDetails?.items[0]?.fields?.mainDescription,
+    profileImageUrl: userDetails?.includes?.Asset[0]?.fields?.file?.url,
+    projects: projects.map((project) => ({
+      title: project.fields?.postTitle,
+      stack: project.fields?.stack,
+      link: project.fields?.externalLink,
+      imageUrl: project.fields.postImage.fields.file.url,
+    })),
+    job: {
+      description: jobStatus.items[0].fields.jobDescription,
+      imageUrl: jobStatus.items[0].fields.image.fields.file.url,
+    },
+  };
 
   return {
-    props: { data: userDetails },
+    props: { data: normalizedData },
   };
 };
 

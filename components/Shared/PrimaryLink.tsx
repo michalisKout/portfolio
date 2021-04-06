@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const PrimaryLink = () => {
+const PrimaryLink = ({ text = 'Michalis Koutridis' }: { text: string }) => {
   return (
     <div>
       <a className="link-primary" href="#">
-        Brand
+        {text}
       </a>
     </div>
   );

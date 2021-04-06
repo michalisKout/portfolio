@@ -1,21 +1,26 @@
-import Toolbar from "./components/Toolbar";
-import NavItems from "../Shared/NavItems";
-import MobileMenuButton from "./components/MobileMenuButton";
-import PrimaryLink from "../Shared/PrimaryLink";
+import Toolbar from './components/Toolbar';
+import NavItems from './components/NavItems';
+import PrimaryLink from '../Shared/PrimaryLink';
+import { useDarkModeClassName } from '../../core/hooks/utils/useDarkModeClassName';
 
-const Navigation = () => (
-  <nav className="nav">
-    <div className="nav--container">
-      <div className="nav--right">
-        <PrimaryLink />
-      </div>
-      <MobileMenuButton />
-      <div className="nav--left">
-        <NavItems />
-        <Toolbar />
-      </div>
+const Navigation = () => {
+  const darkModeClass = useDarkModeClassName();
+
+  return (
+    <div className={darkModeClass}>
+      <nav className="nav">
+        <div className="nav--container">
+          <div className="nav--right">
+            <PrimaryLink />
+          </div>
+          <div className="nav--left">
+            <NavItems />
+            <Toolbar />
+          </div>
+        </div>
+      </nav>
     </div>
-  </nav>
-);
+  );
+};
 
 export default Navigation;

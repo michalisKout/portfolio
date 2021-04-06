@@ -1,7 +1,7 @@
 const InfoTitle = () => (
   <h2 className="info--title">
-    Build Your New
-    <span className="info--tag">Idea</span>
+    Who I Am
+    <span className="info--tag"> *</span>
   </h2>
 );
 export default InfoTitle;
