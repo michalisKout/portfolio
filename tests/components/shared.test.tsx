@@ -7,7 +7,7 @@ describe('Shared Components', () => {
     const { getAllByTestId } = render(<NavItems />);
     const navItems = getAllByTestId(/nav-item/);
 
-    expect(navItems.length).toBe(4);
+    expect(navItems.length).toBe(3);
   });
 
   it('should render Switch component', () => {

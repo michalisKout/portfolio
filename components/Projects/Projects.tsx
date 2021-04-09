@@ -14,7 +14,6 @@ interface Props {
 }
 
 const Projects: FC<Props> = ({ projects }) => {
-  console.log(projects);
   return (
     <section className={'secondary--section'}>
       <div className={'flex justify-center pt-20'}>

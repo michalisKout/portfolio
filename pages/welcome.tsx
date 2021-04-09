@@ -24,7 +24,7 @@ interface Props {
   };
 }
 
-const Welcome: FC<Props> = ({ data = userMock }) => {
+const Welcome: FC<Props> = ({ data }) => {
   const darkModeClass = useDarkModeClassName();
 
   return (

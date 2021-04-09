@@ -3,7 +3,7 @@
 exports[`User should render User 1`] = `
 <DocumentFragment>
   <section
-    class="user--section"
+    class="main--section pt-20 pb-20"
   >
     <div
       class="user--inner-container"
@@ -17,11 +17,15 @@ exports[`User should render User 1`] = `
           <h1
             class="user--title"
           >
-            Who I am
+            Current position
           </h1>
           <section
             class="user--content"
-          />
+          >
+            <div>
+              content
+            </div>
+          </section>
           <div
             class="user--social-medial--container"
           >
@@ -29,22 +33,46 @@ exports[`User should render User 1`] = `
               aria-label="Twitter"
               class="mx-2"
               href="#"
-            />
+            >
+              <span
+                class="icon-svg"
+              >
+                <test />
+              </span>
+            </a>
             <a
               aria-label="Facebook"
               class="mx-2"
               href="#"
-            />
+            >
+              <span
+                class="icon-svg"
+              >
+                <test />
+              </span>
+            </a>
             <a
               aria-label="Linkden"
               class="mx-2"
               href="#"
-            />
+            >
+              <span
+                class="icon-svg"
+              >
+                <test />
+              </span>
+            </a>
             <a
               aria-label="Github"
               class="mx-2"
               href="#"
-            />
+            >
+              <span
+                class="icon-svg"
+              >
+                <test />
+              </span>
+            </a>
           </div>
         </div>
         <div

@@ -3,7 +3,7 @@
 exports[`should render InfoSection 1`] = `
 <DocumentFragment>
   <section
-    class="info--container"
+    class="main--section info--container pt-20 pb-20"
   >
     <div
       class="info--wrapper"
@@ -13,7 +13,7 @@ exports[`should render InfoSection 1`] = `
       >
         <div
           class="info--image"
-          style="background-image: url(https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80);"
+          style="background-image: url(fake-url);"
         />
       </div>
       <div
@@ -22,28 +22,20 @@ exports[`should render InfoSection 1`] = `
         <h2
           class="info--title"
         >
-          Build Your New
+          Who I Am
           <span
             class="info--tag"
           >
-            Idea
+             *
           </span>
         </h2>
         <p
           class="info--content"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
+          <span>
+            content
+          </span>
         </p>
-        <div
-          class="mt-8"
-        >
-          <a
-            class="info--button"
-            href="#"
-          >
-            Start Now
-          </a>
-        </div>
       </div>
     </div>
   </section>
