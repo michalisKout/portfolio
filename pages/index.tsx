@@ -24,7 +24,7 @@ interface Props {
   };
 }
 
-const Welcome: FC<Props> = ({ data }) => {
+const Index: FC<Props> = ({ data }) => {
   const darkModeClass = useDarkModeClassName();
 
   return (
@@ -69,4 +69,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export default Welcome;
+export default Index;

@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
-import Welcome from '../../pages/welcome';
+import Index from '../../pages';
 import mockData from '__mocks__/userMock';
 
-describe('Welcome page', () => {
-  it('renders Welcome page', () => {
-    const { asFragment } = render(<Welcome data={mockData} />);
+describe('Index page', () => {
+  it('renders Index page', () => {
+    const { asFragment } = render(<Index data={mockData} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
